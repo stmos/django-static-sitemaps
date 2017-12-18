@@ -187,7 +187,7 @@ class SitemapGenerator(object):
                     self.out('Compressing...', 2)
                     buf = BytesIO()
                     with gzip.GzipFile(fileobj=buf, mode="w") as f:
-                        f.write(output.encode('utf-8'))
+                        f.write(output)
                     self.storage.save(gzipped_path, ContentFile(buf.getvalue()))
                 except OSError:
                     self.out("Compress %s file error" % path)
