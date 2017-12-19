@@ -1,5 +1,5 @@
 include README.rst
 include MANIFEST.in
-recursive-include templates *
+recursive-include static_sitemaps/templates *
 global-exclude __pycache__
 global-exclude *.pyc
